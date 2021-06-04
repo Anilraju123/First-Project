@@ -1,0 +1,12 @@
+<aura:component implements="force:appHostable,flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId,forceCommunity:availableForAllPageTypes,force:lightningQuickAction" access="global" >
+	<aura:attribute name="login" type="String" access="public"/>
+    <aura:registerevent name="event1" type="c.FirstEvent"/>
+    <aura:attribute name="passvalue2" type="String" access="public"/>
+    <aura:handler name="init" value="{!this}" action="{!c.init}"/>
+    <aura:handler event="c:SecondEvent" action="{!c.new1}"/>
+    <lightning:card class="card1">
+       <H6> Wellome to Registaration</H6>
+       <p>Login user : {!v.login} </p>
+         <p>Vaule : {!v.passvalue2}</p>
+    </lightning:card>
+</aura:component>

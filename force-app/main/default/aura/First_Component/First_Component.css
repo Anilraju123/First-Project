@@ -1,0 +1,23 @@
+.THIS.card1{
+    padding-left : 50px;
+    height: 250pX;
+   background-color: #B09191;
+}
+ .THIS .one{
+    width : 300px;
+    font-size:150%;
+    
+    
+}
+
+.THIS .slds-button{
+    margin-top: 20px;
+}
+.THIS .slds-is-absolute{
+    width:150px;
+   Height:120px; 
+    
+      margin-top: -100px;
+        margin-left:400px;
+    margin-bottom: 500px;
+}

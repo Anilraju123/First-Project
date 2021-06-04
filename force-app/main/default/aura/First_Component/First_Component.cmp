@@ -1,0 +1,17 @@
+<aura:component implements="force:appHostable,flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId,forceCommunity:availableForAllPageTypes,force:lightningQuickAction" access="global" controller="AddData" >
+     <aura:attribute name="value1" access="public" type="String"/>
+     <aura:attribute name="value2" access="public" type="String"/>
+     <aura:attribute name="userid" type="String" access="public"/>
+    <aura:attribute name="passvalue" type="String" access="public"/>
+    
+    <aura:handler name="init" value="{!this}" action="{!c.init}"/>
+    <aura:handler name="event1" event="c:FirstEvent" action="{!c.new}"/>
+    <lightning:card class="card1" footer="{!v.passvalue}" > 
+        <lightning:input class="one" type="String" name="input1" value="{!v.value1}"  label="Enter the first name" />
+        <lightning:input  class="one" type="String" name="input2" value="{!v.value2}" label="Enter the last name"/>
+        <lightning:button class="slds-button slds-button_brand" variant="brand" label="Save" title="Brand action" onclick="{! c.handleClick }" />
+         <lightning:button class="slds-button slds-button_brand" variant="brand" label="Reset" title="Brand action" onclick="{! c.handleClick }" />
+        <img  class ="slds-is-absolute" src="{!$Resource.Swam}" alt="User avatar"/>
+    </lightning:card>
+  <c:Second_Component login = "{!v.userid}"/>
+</aura:component>
